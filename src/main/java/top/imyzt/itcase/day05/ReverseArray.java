@@ -1,14 +1,14 @@
 package top.imyzt.itcase.day05;
 
 /**
- * 数组倒序
+ * 鏁扮粍鍊掑簭
  * @author 01
  *
  */
 public class ReverseArray {
 	
 	public static void main(String[] args) {
-		//静态初始化 等同于int[] arr = new int[]{1,2,3,4,5,6,7,8,9,-1,2,34,-4,-5,-5};
+		//闈欐�佸垵濮嬪寲 绛夊悓浜巌nt[] arr = new int[]{1,2,3,4,5,6,7,8,9,-1,2,34,-4,-5,-5};
 		int[] arr = {1,2,3,4,5,6,7,8,9};
 		
 		reverse(arr);

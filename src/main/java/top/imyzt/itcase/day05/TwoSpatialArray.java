@@ -1,7 +1,7 @@
 package top.imyzt.itcase.day05;
 
 /**
- * 二维数组的初始化,读取
+ * 浜岀淮鏁扮粍鐨勫垵濮嬪寲,璇诲彇
  * @author 01
  *
  */
@@ -9,7 +9,7 @@ public class TwoSpatialArray {
 
 	public static void main(String[] args) {
 		
-		//二维数组的各种初始化方法
+		//浜岀淮鏁扮粍鐨勫悇绉嶅垵濮嬪寲鏂规硶
 		int[] arr[] = new int[22][21];
 		int[][] arr1 = new int[1][1];
 		int[][] arr2 = new int[2][];
@@ -32,7 +32,7 @@ public class TwoSpatialArray {
 	}
 
 	/**
-	 * 二维数组求和
+	 * 浜岀淮鏁扮粍姹傚拰
 	 * @param arr
 	 * @return
 	 */

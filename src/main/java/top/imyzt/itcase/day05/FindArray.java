@@ -1,7 +1,7 @@
 package top.imyzt.itcase.day05;
 
 /**
- * 查找数组中的元素
+ * 鏌ユ壘鏁扮粍涓殑鍏冪礌
  * @author 01
  *
  */

@@ -38,10 +38,6 @@ public class Type {
 			}
 		}
 	}
-	@Override
-	public boolean equals(Object obj) {
-		return false;
-	}
 
 	private static void change(int a, int b) {
 		System.out.println("a=" + a + ", b=" + b);		//a=10, b=20

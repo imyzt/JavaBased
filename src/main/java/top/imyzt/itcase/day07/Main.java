@@ -13,7 +13,7 @@ public class Main {
 		 * static 被jvm调用,不需要创建对象,直接类名调用即可
 		 * void 被jvm调用,不需要有任何返回值
 		 * main 只有这样写才能被jvm识别,main不是关键字
-		 * String[] args 以前用来接收键盘录入的
+		 * String[] args 以前用来接收键盘录入的 
 		 */
 	}
 

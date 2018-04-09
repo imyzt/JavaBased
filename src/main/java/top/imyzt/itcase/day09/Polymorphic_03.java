@@ -21,7 +21,8 @@ public class Polymorphic_03 {
 		
 	}
 	
-	public static void method(Animal03 a) {
+	public static void method(Animal03 a) {		//当做参数的时候用多态最好,扩展性强
+		//instanceof判断左边的引用是否是右边的数据类型
 		if (a instanceof Object) {
 			Cat03 c = (Cat03) a;			
 			c.eat();

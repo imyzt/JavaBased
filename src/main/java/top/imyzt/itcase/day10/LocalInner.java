@@ -20,7 +20,12 @@ class Outer05{
 		class Inner05{
 			int a = 12;
 			public void print() {
-				//局部内部类可以访问外部类的属性,jdk1.8以前需要给属性添加final才能访问
+				/*
+				 * 局部内部类可以访问外部类的属性,jdk1.8以前需要给属性添加final才能访问
+				 * 为什么用final修饰:
+				 * 	因为a是局部变量,Outer05的say()方法弹栈后,就消失了，而new Inner05()对象还存在在堆中。
+				 * 	用final修饰的a进入方法区常量池,故方法弹栈后也还在.new Inner05()随时都可以使用
+				 */
 				System.out.println("print" + Outer05.this.c + a);
 			}
 		}

@@ -14,14 +14,23 @@ package top.imyzt.itcase.day09;
  *
  */
 public class Case_01 {
+	static final String i = "1";
+	public static void main(String[] args) {
+		String a = "1";
+		a = "2";
+		System.out.println(i==a);
+		System.out.println(i);
+		
+	}
 
 }
 interface InterA{
-	public abstract void printA();
+	abstract void printA();
+	
 }
 interface InterB {
 	public abstract void printB();	
 }
 interface InterC extends InterA, InterB{
-	
+	public void printA();
 }

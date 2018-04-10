@@ -1,5 +1,7 @@
 package top.imyzt.itcase.day09;
 
+import java.time.LocalDate;
+
 /**
  * 
  * 成员变量
@@ -14,6 +16,10 @@ package top.imyzt.itcase.day09;
 public class Polymorphic_02 {
 
 	public static void main(String[] args) {
+		
+		LocalDate ld = LocalDate.now();
+		System.out.println(ld.getYear());
+		
 		Fu01 f = new Zi01();
 		//f的指针只能操作new Zi01()中super区(父)中的成员变量(因为左边Fu01 f是Fu01类型的,故只能操作super区父类的成员变量)
 		System.out.println(f.num);		//10

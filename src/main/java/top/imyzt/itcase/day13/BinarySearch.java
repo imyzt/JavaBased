@@ -20,6 +20,7 @@ public class BinarySearch {
 			System.out.println(binarySearch(arr, num));
 			System.out.println("----------------------");
 		}
+		
 	}
 
 	private static int binarySearch(int[] arr, int value) {

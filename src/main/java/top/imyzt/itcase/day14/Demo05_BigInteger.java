@@ -8,7 +8,7 @@ import java.math.BigInteger;
 * @version 1.0 
 * @Description BigInteger类学习 
 */
-public class Demo5_BigInteger {
+public class Demo05_BigInteger {
 	
 	public static void main(String[] args) {
 		

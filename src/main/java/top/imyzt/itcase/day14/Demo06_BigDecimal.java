@@ -21,6 +21,17 @@ public class Demo06_BigDecimal {
 		
 		BigDecimal bd1 = new BigDecimal("2.0");
 		BigDecimal bd2 = new BigDecimal("1.1");
+		
+		BigDecimal bd3 = BigDecimal.valueOf(2.0);
+		BigDecimal bd4 = BigDecimal.valueOf(1.1);
+		System.out.println(bd3.subtract(bd4));
+		
+		System.out.println(bd1.add(bd2));
+		System.out.println(bd1.subtract(bd2));
+		System.out.println(bd1.multiply(bd2));
+		System.out.println(bd1.divide(bd2));
+		
+		
 
 	}
 

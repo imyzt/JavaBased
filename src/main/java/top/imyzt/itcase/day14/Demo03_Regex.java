@@ -111,12 +111,12 @@ public class Demo03_Regex {
 	 * 字符类
 	 */
 	private static void demo01() {
-		//[]中括号,取一个
-		System.out.println("\"a\".matches(\"[abc]\"):" + "a".matches("[abc]"));	//[...]匹配其中任意一个
-		System.out.println("\"a\".matches(\"[^abc]\"):" + "a".matches("[^abc]")); //[^...]匹配除了...中任意一个
-		System.out.println("\"a\".matches(\"[a-h[e-z]]\":" + "a".matches("[a-h[e-z]]")); //取a-h和e-z的并集a-z
-		System.out.println("\"f\".matches(\"[a-h&&[e-z]]\"):"+ "f".matches("[a-h&&[e-z]]")); //取a-h和e-z的交集e-h
-		System.out.println("\"a\".matches(\"[a-z&&[^f-z]]\"):" + "f".matches("[a-z&&[^f-z]]")); //取a-z中除了f-z的交集的任意一个
+//[]中括号,取一个
+System.out.println("\"a\".matches(\"[abc]\"):" + "a".matches("[abc]"));	//[...]匹配其中任意一个
+System.out.println("\"a\".matches(\"[^abc]\"):" + "a".matches("[^abc]")); //[^...]匹配除了...中任意一个
+System.out.println("\"a\".matches(\"[a-h[e-z]]\":" + "a".matches("[a-h[e-z]]")); //取a-h和e-z的并集a-z
+System.out.println("\"f\".matches(\"[a-h&&[e-z]]\"):"+ "f".matches("[a-h&&[e-z]]")); //取a-h和e-z的交集e-h
+System.out.println("\"a\".matches(\"[a-z&&[^f-z]]\"):" + "f".matches("[a-z&&[^f-z]]")); //取a-z中除了f-z的交集的任意一个
 	}
 	
 }

@@ -21,8 +21,8 @@ public class Demo01_Collection {
 		c1.add("b");
 		c1.add("c");
 		Iterator it = c1.iterator();
-		while (it.hasNext()) {
-			System.out.println(it.next());
+		while (it.hasNext()) {				//it.hasNext()判断是否有下一个元素
+			System.out.println(it.next());	//it.next()获取元素并将指针向后移动
 		}
 		
 		

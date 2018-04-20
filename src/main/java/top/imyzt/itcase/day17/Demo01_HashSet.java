@@ -7,6 +7,16 @@ import java.util.HashSet;
 * @date 2018年4月19日 下午3:57:10 
 * @version 1.0 
 * @Description Set的子类HashSet,无序不可重复集合 
+* 
+* HashSet原理:
+* 	我们使用Set集合都是需要去重,如果在存储的时候逐个比较equals()方法,效率较低,哈希算法提高了去重的效率,降低了使用equals()方法的调用次数
+* 	当HashSet调用add()方法存储对象的时候,会先调用HashCode()方法得到一个哈希值,然后在集合中查找是否有相同哈希值的对象.(相同属性的对象的哈希值相同)
+* 		如果没有哈希值相同的对象就直接存入集合
+* 		如果有哈希值相同的对象,就和哈希值相同的对象逐个进行equals比较,比较结果为false就存入,true不存
+* 	将自定义对象存入HashSet去重时:
+* 		1.类中必须重写hashCode()和equals()
+* 		2.hashCode():属性值相同的值必须相同,属性值不同的返回值尽量不同(提高效率)
+* 		3.equals():属性值相同返回true,属性值不同返回false
 */
 public class Demo01_HashSet {
 
@@ -111,6 +121,12 @@ class Person{
 	}
 	@Override
 	public int hashCode() {
+		/**
+		 * 为什么是31?
+		 * 1.31是质数,质数只能被1和本身整除
+		 * 2.31不大不小,不会超出int取值范围
+		 * 3.31是2^5-1
+		 */
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((age == null) ? 0 : age.hashCode());

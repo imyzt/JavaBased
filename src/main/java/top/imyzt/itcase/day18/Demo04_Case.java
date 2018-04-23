@@ -22,7 +22,6 @@ public class Demo04_Case {
 		if (null != input && !"".equals(input)) {
 			char[] charArray = input.toCharArray();
 			
-			
 			for (char c : charArray) {
 				map.put(c, map.containsKey(c) ? map.get(c) + 1 : 1);
 			}

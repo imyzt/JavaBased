@@ -11,11 +11,13 @@ import java.util.Set;
  * @author 杨镇涛
  * @date 2018年4月21日 下午3:31:34
  * @version 1.0
- * @Description 单列集合基于双列集合实现,单列集合是将双列集合的第二列填充掉. HashMap是双列集合
+ * @Description 单列集合基于双列集合实现,单列集合是将双列集合的第二列(value)填充掉.
+ * HashMap是双列集合,可以存储null键和null值
+ * 线程不安全,效率高
  */
 public class Demo01_HashMap {
 	public static void main(String[] args) {
-//		case01();
+		case01();
 //		itorater01();
 //		iterator02();
 
@@ -95,6 +97,9 @@ public class Demo01_HashMap {
 
 		//containsValue()返回是否包含这个value
 		System.out.println(map.containsValue(20));		//true
+		
+		//获取所有的key
+		System.out.println(map.keySet());
 		
 		//values()得到所有的值
 		Collection<Object> values = map.values();

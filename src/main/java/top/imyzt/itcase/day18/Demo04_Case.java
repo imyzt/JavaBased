@@ -1,10 +1,8 @@
 package top.imyzt.itcase.day18;
 
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 /** 
 * @author 杨镇涛

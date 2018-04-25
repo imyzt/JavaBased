@@ -1,8 +1,8 @@
 package top.imyzt.test;
 
-import cn.hutool.core.convert.Convert;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.lang.Console;
 import cn.hutool.core.util.IdcardUtil;
 
 /** 
@@ -20,6 +20,9 @@ public class HuTools {
 		System.out.println(IdcardUtil.hide("321083197812162119", 6, 14));
 		DateTime parse = DateUtil.parse("2018-04-24");
 		System.out.println(IdcardUtil.getAgeByIdCard(idCard, parse));
+		
+		
+		Console.error("hehe");
 	}
 
 }

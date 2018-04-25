@@ -4,6 +4,7 @@ import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.lang.Console;
 import cn.hutool.core.util.IdcardUtil;
+import cn.hutool.http.HttpUtil;
 
 /** 
 * @author 杨镇涛
@@ -23,6 +24,11 @@ public class HuTools {
 		
 		
 		Console.error("hehe");
+		
+		
+		String string = HttpUtil.get("https://blog.imyzt.top");
+		Console.log(string);
+		
 	}
 
 }

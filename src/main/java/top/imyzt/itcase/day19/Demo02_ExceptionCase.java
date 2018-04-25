@@ -36,6 +36,7 @@ public class Demo02_ExceptionCase {
 			return i;		//当执行到return i;时已经建立好返回路径了.i的值已经固定.finally修改对return的i的值没有影响
 		} finally {
 			i = 40;
+			//return i;   //finally里面千万不能写return语句.try和catch里面的return将会失效
 		}
 	}
 

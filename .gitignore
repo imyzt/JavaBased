@@ -4,3 +4,6 @@ target/
 .settings/
 /log.txt
 /test.txt
+/chinese.txt
+/chineseWriter.txt
+/out.txt

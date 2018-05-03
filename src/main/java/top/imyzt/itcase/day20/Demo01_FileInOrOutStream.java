@@ -1,7 +1,6 @@
 package top.imyzt.itcase.day20;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 

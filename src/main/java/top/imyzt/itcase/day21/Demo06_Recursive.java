@@ -20,10 +20,10 @@ public class Demo06_Recursive {
 	}
 	static int i = 0;
 	public static void createDirectory(File f) {
-		if (i > 255) {
+		/*if (i > 255) {
 			return;
 		}
-		i++;
+		i++;*/
 		if (f.isDirectory()) {
 			File file = new File(f.getAbsolutePath() + File.separator + "a");
 			file.mkdirs();

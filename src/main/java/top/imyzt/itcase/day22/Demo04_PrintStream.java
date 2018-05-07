@@ -50,7 +50,6 @@ public class Demo04_PrintStream {
 		pw.write("ddd");
 		pw.print("eee");
 		pw.println("fff");
-		
 		pw.close();
 	}
 

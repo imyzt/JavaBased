@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import static cn.hutool.core.lang.Console.log;
 
 /**
 * @author imyzt
@@ -15,11 +16,10 @@ import java.io.PrintWriter;
 public class Demo04_PrintStream {
 	
 	public static void main(String[] args) throws IOException {
-		
+		log();
 //		method01();
 		
 //		method02();
-		
 		
 		method03();
 	}

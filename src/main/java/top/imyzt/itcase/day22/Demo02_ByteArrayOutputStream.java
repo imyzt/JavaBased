@@ -5,6 +5,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
+ * 
+ * 内存输出流
+ * 
 * @author imyzt
 * @email imyzt01@gmail.com
 * @date 2018年5月5日 下午3:55:29 

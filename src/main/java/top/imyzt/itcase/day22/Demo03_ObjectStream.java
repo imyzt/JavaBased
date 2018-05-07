@@ -15,6 +15,8 @@ import java.util.stream.Collectors;
 
 /**
  * 
+ * 对象输入和输出流
+ * 
  * ObjectInputStream ObjectOutputStream
  * 对象输入流和对象输出流
  * 用于将 序列化 后的对象存入文档 和 从文档中读取对象

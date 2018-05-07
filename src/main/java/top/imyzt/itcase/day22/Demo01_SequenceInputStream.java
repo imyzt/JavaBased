@@ -10,6 +10,8 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 /**
+ * 
+ * 序列流
 * @author imyzt
 * @email imyzt01@gmail.com
 * @date 2018年5月5日 下午2:32:28 

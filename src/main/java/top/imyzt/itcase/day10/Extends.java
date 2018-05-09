@@ -22,7 +22,7 @@ interface Father{
 class Son implements Father{
 	
 	//子类重写父类方法时返回值属于父类返回值的子类或自己即可
-	public Person01 say(){
+	public Student say(){
 		return new Student();
 	}
 }

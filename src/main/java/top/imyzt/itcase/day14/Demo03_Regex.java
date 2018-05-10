@@ -4,34 +4,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** 
-* @author 杨镇涛
-* @date 2018年4月14日 下午4:46:33 
-* @version 1.0 
-* @Description 
-*/
+ * @author 杨镇涛
+ * @date 2018年4月14日 下午4:46:33 
+ * @version 1.0 
+ * @Description 
+ */
 public class Demo03_Regex {
 
 	public static void main(String[] args) {
-		
-//		demo01();
-		
-//		demo02();
-		
-//		demo03();
-		
-//		demo04();
-		
+
+		//		demo01();
+
+		//		demo02();
+
+		//		demo03();
+
+		//		demo04();
+
 		String s = "我...我...我...我...爱...爱...爱...爱...学...学...学...学...习...习...习...习...习";
-		
+
 		String s2 = s.replaceAll("\\.", "");
-		
+
 		/*
 		 * 分组(.)\1 匹配任意字符一组
 		 * (.)\1+ 匹配任意字符一组一次或多次
 		 * $1 取组里面的第一个元素
 		 */
 		String s3 = s2.replaceAll("(.)\\1+", "$1");
-		
+
 		System.out.println(s3);
 	}
 
@@ -42,11 +42,11 @@ public class Demo03_Regex {
 		String num = "12,3213,1432,132,43,54,23";
 		String[] numArr = num.split(",");
 		int[] numInt = new int[numArr.length];
-		
+
 		for (int i = 0; i < numArr.length; i++) {
 			numInt[i] = Integer.parseInt(numArr[i]);
 		}
-		
+
 		for (int i = 0; i < numInt.length - 1; i++) {
 			int index = i;
 			for (int j = i + 1; j < numInt.length; j++) {
@@ -60,7 +60,7 @@ public class Demo03_Regex {
 				numInt[index] = temp;
 			}
 		}
-		
+
 		StringBuilder sb = new StringBuilder();
 		for (int i : numInt) {
 			sb.append(" " + i);
@@ -73,13 +73,13 @@ public class Demo03_Regex {
 		//?: 匹配前面的条件 0-1次
 		System.out.println("a".matches("[abc]?"));
 		System.out.println("".matches("[abc]?"));
-		
+
 		//+: 匹配前面的条件1-n次
 		System.out.println("abc".matches("[abc]+"));
-		
+
 		//*: 匹配前面的条件0-n次
 		System.out.println("abcccc".matches("[abc]*"));
-		
+
 		/*
 		 * {n}: 匹配前面条件{n}次
 		 * {n,}: 匹配前面条件至少n次
@@ -111,12 +111,12 @@ public class Demo03_Regex {
 	 * 字符类
 	 */
 	private static void demo01() {
-//[]中括号,取一个
-System.out.println("\"a\".matches(\"[abc]\"):" + "a".matches("[abc]"));	//[...]匹配其中任意一个
-System.out.println("\"a\".matches(\"[^abc]\"):" + "a".matches("[^abc]")); //[^...]匹配除了...中任意一个
-System.out.println("\"a\".matches(\"[a-h[e-z]]\":" + "a".matches("[a-h[e-z]]")); //取a-h和e-z的并集a-z
-System.out.println("\"f\".matches(\"[a-h&&[e-z]]\"):"+ "f".matches("[a-h&&[e-z]]")); //取a-h和e-z的交集e-h
-System.out.println("\"a\".matches(\"[a-z&&[^f-z]]\"):" + "f".matches("[a-z&&[^f-z]]")); //取a-z中除了f-z的交集的任意一个
+		//[]中括号,取一个
+		System.out.println("\"a\".matches(\"[abc]\"):" + "a".matches("[abc]"));	//[...]匹配其中任意一个
+		System.out.println("\"a\".matches(\"[^abc]\"):" + "a".matches("[^abc]")); //[^...]匹配除了...中任意一个
+		System.out.println("\"a\".matches(\"[a-h[e-z]]\":" + "a".matches("[a-h[e-z]]")); //取a-h和e-z的并集a-z
+		System.out.println("\"f\".matches(\"[a-h&&[e-z]]\"):"+ "f".matches("[a-h&&[e-z]]")); //取a-h和e-z的交集e-h
+		System.out.println("\"a\".matches(\"[a-z&&[^f-z]]\"):" + "f".matches("[a-z&&[^f-z]]")); //取a-z中除了f-z的交集的任意一个
 	}
-	
+
 }

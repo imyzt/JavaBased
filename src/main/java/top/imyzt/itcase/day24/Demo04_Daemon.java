@@ -23,10 +23,24 @@ public class Demo04_Daemon {
 			}
 		};
 		
+		Thread t3 = new Thread() {
+			@Override
+			public void run() {
+				for (int i = 0; i < 2; i++) {
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					System.out.println("非守护线程222222222222222222在执行..." + i);
+				}
+			}
+		};
+		
 		Thread t2 = new Thread() {
 			@Override
 			public void run() {
-				for (int i = 0; i < 10; i++) {
+				for (int i = 0; i < 1000; i++) {
 					System.out.println("...守护线程在执行" + i);
 				}
 			}
@@ -36,7 +50,7 @@ public class Demo04_Daemon {
 		t2.setDaemon(true);
 		t1.start();
 		t2.start();
-		
+		t3.start();
 		
 		/*
 		 * ...守护线程在执行0

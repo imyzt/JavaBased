@@ -1,4 +1,11 @@
 package top.imyzt.itcase.day24;
+
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import javax.security.auth.callback.Callback;
+
 /**
  * 
  * 如何实现多线程:
@@ -13,8 +20,8 @@ package top.imyzt.itcase.day24;
  */
 public class Demo02_Thread {
 
-	public static void main(String[] args) {
-		MyThread thread = new MyThread();
+	public static void main(String[] args) throws Exception {
+		/*MyThread thread = new MyThread();
 		thread.start();
 
 		MyRunnable runnable = new MyRunnable();
@@ -22,7 +29,19 @@ public class Demo02_Thread {
 		
 		for (int i = 0; i < 10000; i++) {
 			System.out.println("输出了");
-		}
+		}*/
+		
+		
+		MyCallable<String> m = new MyCallable();
+		ExecutorService pool = Executors.newCachedThreadPool();
+		pool.submit(m);
+		
+		
+		System.out.println(m.getName());
+		
+		System.out.println(m.call());
+		
+		pool.shutdown();
 	}
 
 }
@@ -35,7 +54,6 @@ class MyThread extends Thread {
 			System.out.println("MyThread启动了...");
 		}
 	}
-
 }
 
 class MyRunnable implements Runnable{
@@ -45,6 +63,28 @@ class MyRunnable implements Runnable{
 		for (int i = 0; i < 10000; i++) {
 			System.out.println("MyRunnable启动了...");
 		}
+	}
+}
+
+class MyCallable<T> implements Callable<T>{
+	
+	private String name = "zy";
+
+	@Override
+	public T call() throws Exception {
+		
+		Thread.sleep(3000);
+		name = "sdfaasdfsad";
+		
+		return (T) name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
 	}
 	
 }

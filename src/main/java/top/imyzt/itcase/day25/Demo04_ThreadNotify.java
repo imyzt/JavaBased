@@ -56,14 +56,14 @@ class Printer {
 	public void print01() throws InterruptedException {
 		synchronized (this) {
 			if (flag != 1) {
-				this.wait();
+				this.wait();					//当前线程等待
 			}
 			System.out.print("1");
 			System.out.print("2");
 			System.out.print("3");
 			System.out.println();
 			flag = 2;
-			this.notify();
+			this.notify();						//随机唤醒单个等待的线程
 		}
 	}
 	

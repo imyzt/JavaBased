@@ -43,6 +43,13 @@ public class Demo04_ThreadWait {
 	
 }
 
+/**
+ * 等待唤醒机制
+ * 
+ * @author imyzt
+ * @email imyzt01@gmail.com
+ * @date 2018年5月11日 上午8:46:40
+ */
 class Printer {
 	private int flag = 1;
 	

@@ -7,7 +7,7 @@ package top.imyzt.itcase.day25;
  * @email imyzt01@gmail.com
  * @date 2018年5月10日 下午5:31:23 
  */
-public class Demo04_ThreadWait {
+public class Demo04_ThreadNotify {
 
 	public static void main(String[] args) {
 		

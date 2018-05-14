@@ -73,11 +73,11 @@ class Print01{
 	private Condition c3 = lock.newCondition();
 
 	public void print01() throws InterruptedException {
-		lock.lock();
+		lock.lock();		//将当前线程锁定
 
 		try {
 			if (flag != 1) {
-				c1.await();
+				c1.await();		//当前线程进入等待状态,通过其他线程调用当前线程的signal()方法解除等待状态
 			}
 
 			System.out.print("a");
@@ -85,9 +85,9 @@ class Print01{
 			System.out.println();
 
 			flag = 2;
-			c2.signal();
+			c2.signal();		//将c2线程唤醒
 		} finally {
-			lock.unlock();
+			lock.unlock();		//将当前线程解除锁定状态
 		}
 	}
 

@@ -34,7 +34,7 @@ public class Demo07_ThreadGroup {
 		System.out.println(t1.getThreadGroup().getName());
 		System.out.println(t2.getThreadGroup().getName());
 		
-		tg.setDaemon(true);
+		tg.setDaemon(true);													//通过线程组统一操作对象
 	}
 
 	/**
@@ -62,7 +62,9 @@ public class Demo07_ThreadGroup {
 
 		@Override
 		public void run() {
-			System.out.println(Thread.currentThread().getName() + "=i");
+			for (int i = 0; i < 100; i++) {
+				System.out.println(Thread.currentThread().getName() + "=" + i);
+			}
 		}
 		
 	}

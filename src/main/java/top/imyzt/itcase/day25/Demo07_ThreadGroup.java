@@ -12,8 +12,19 @@ public class Demo07_ThreadGroup {
 
 	public static void main(String[] args) {
 
-//		method01();
+		getThreadGroupName();
 		
+		ThreadAddThreadGroup();
+	}
+
+	/**
+	 * 将线程加入到线程组,通过Thread的构造
+	 * new Thread(线程组,Runnable的子类对象,线程名称)
+	 * 
+	 * @author:imyzt
+	 * @date:2018年5月14日上午11:49:06
+	 */
+	public static void ThreadAddThreadGroup() {
 		ThreadGroup tg = new ThreadGroup("线程组一");							//创建线程组
 		MyRunnable runnable = new Demo07_ThreadGroup().new MyRunnable();	//创建Runnable的子类对象
 
@@ -34,7 +45,7 @@ public class Demo07_ThreadGroup {
 	 * @author:imyzt
 	 * @date:2018年5月14日上午11:29:50
 	 */
-	public static void method01() {
+	public static void getThreadGroupName() {
 		MyRunnable runnable = new Demo07_ThreadGroup().new MyRunnable();
 		
 		Thread t1 = new Thread(runnable, "线程一");

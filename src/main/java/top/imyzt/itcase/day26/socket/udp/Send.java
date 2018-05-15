@@ -28,7 +28,5 @@ public class Send {
 		
 		//关闭码头
 		socket.close();
-		
 	}
-
 }

@@ -35,5 +35,4 @@ public class Receive {
 		//关闭码头
 		socket.close();
 	}
-
 }

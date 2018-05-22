@@ -71,6 +71,11 @@ public class Person {
 		super();
 	}
 
+	public Person(String name) {
+		super();
+		this.name = name;
+	}
+	
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", email=" + email + ", sex=" + sex
@@ -121,5 +126,9 @@ public class Person {
 		if (sex != other.sex)
 			return false;
 		return true;
+	}
+	
+	private void print(String name) {
+		System.out.println("Person [id=" + id + ", name=" + name + ", address=" + address + ", email=" + email + ", sex=" + sex +"]");
 	}
 }

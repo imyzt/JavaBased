@@ -13,3 +13,4 @@ target/
 /d.txt
 /f.txt
 /gameinfo.txt
+/conf.properties

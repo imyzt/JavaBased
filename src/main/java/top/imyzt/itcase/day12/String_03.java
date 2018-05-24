@@ -25,14 +25,14 @@ public class String_03 {
 	 * 查找s2在s1中出现的次数
 	 */
 	private static void demo03() {
-		String s1 = "jjjjsdfadfjjjsdfaasdfadsjjjasfdfdsjjjfsadfajjj";
-		String s2 = "jjj";
+		String s1 = "xxxxxx";
+		String s2 = "xx";
 
-		int count = 0;
-		int index = 0;
-		while ((index = s1.indexOf(s2)) != -1) {
-			s1 = s1.substring(index + s2.length());
-			++count;
+		//index = -1是为了在第一次while循环时 ++ index不要把s1的0号元素排除
+		int index = -1, count = 0;
+		
+		while ((index = s1.indexOf(s2, ++index)) != -1) {
+			count++;
 		}
 		System.out.println(count);
 	}

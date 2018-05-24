@@ -17,12 +17,41 @@ public class BinarySearch {
 		Scanner input = new Scanner(System.in);
 		while (true) {
 			int num = input.nextInt();
-			System.out.println(binarySearch(arr, num));
+			System.out.println(biary(arr, num));
 			System.out.println("----------------------");
 		}
 		
 	}
 
+	
+	
+	private static int biary(int[] arr, int num) {
+		
+		int max = arr[arr.length - 1], min = arr[0], mid = (max + min) / 2;
+		
+		while (min <= max) {
+			
+			
+			
+		}
+		
+		return mid;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static int binarySearch(int[] arr, int value) {
 		int min = arr[0], max = arr[arr.length - 1], mid = (max + min) / 2;
 		
@@ -43,6 +72,6 @@ public class BinarySearch {
 			}
 		}
 		
-		return value;
+		return mid;
 	}
 }

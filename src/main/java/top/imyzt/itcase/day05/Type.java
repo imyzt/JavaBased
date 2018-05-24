@@ -29,6 +29,14 @@ public class Type {
 		change(c);	//传递的地址
 		System.out.println(c[1]);						//4,为什么变成了4
 		
+		System.out.println(" ------------------------ ");
+		
+		String str = "String";
+		System.out.println(str);						//String
+		change(str);	//传递的值(String类型特殊)
+		System.out.println(str);						//str=String
+		
+		
 	}
 
 	private static void change(int[] c) {
@@ -44,6 +52,12 @@ public class Type {
 		a = 30;											//由于传递的值,栈会重新开辟一块空间存储此方法中的变量.等此方法结束(弹栈),a=30, b=40就会从内存中消失
 		b = 40;
 		System.out.println("a=" + a + ", b=" + b);		//a=30, b=40
+	}
+	
+	private static void change(String str) {
+		System.out.println("str=" + str);		//str=String
+		str = "str";											//由于传递的值,栈会重新开辟一块空间存储此方法中的变量.等此方法结束(弹栈),str=str就会从内存中消失
+		System.out.println("str=" + str);		//str=str
 	}
 	
 }

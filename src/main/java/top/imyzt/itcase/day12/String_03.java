@@ -10,15 +10,15 @@ public class String_03 {
 
 	public static void main(String[] args) {
 
-		//		demo01();
-
-		//		demo02();
-
+		demo01();
 		
+		System.out.println("----------------------------");
+
+		demo02();
+
+		System.out.println("----------------------------");
+
 		demo03();
-
-
-
 	}
 
 	/**
@@ -28,9 +28,13 @@ public class String_03 {
 		String s1 = "xxxxxx";
 		String s2 = "xx";
 
+		if (s1.length() <= s2.length()) {
+			throw new IllegalArgumentException("字符串s1长度小于或等于s2的长度");
+		}
+
 		//index = -1是为了在第一次while循环时 ++ index不要把s1的0号元素排除
 		int index = -1, count = 0;
-		
+
 		while ((index = s1.indexOf(s2, ++index)) != -1) {
 			count++;
 		}
@@ -46,6 +50,7 @@ public class String_03 {
 	private static void demo01() {
 		String s1 = "kjfdsajfksdahfjksdahfiuwehFSJDKHNRW";
 		//将首字母转换为大写,其他的全小写
+
 		String s2 = s1.substring(0,1).toUpperCase().concat(s1.substring(1).toLowerCase()); //链式编程
 		System.out.println(s2);
 	}

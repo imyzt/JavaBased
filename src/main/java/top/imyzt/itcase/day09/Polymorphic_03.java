@@ -18,12 +18,17 @@ public class Polymorphic_03 {
 		method(new Dog03());
 		method(new Pig03());
 		method(new Cat03());
+		method(new T());
 		
+		
+		System.out.println();
+		Animal03 a = new Dog03();
+		a.eat();
 	}
 	
 	public static void method(Animal03 a) {		//当做参数的时候用多态最好,扩展性强
-		//instanceof判断左边的引用是否是右边的数据类型
-		if (a instanceof Object) {
+		//instanceof判断左边的引用是否是右边的子类对象或者是相同对象
+		if (a instanceof Cat03) {
 			Cat03 c = (Cat03) a;			
 			c.eat();
 			c.catchMouse();
@@ -72,5 +77,11 @@ class Pig03 extends Animal03{
 	}
 	public void sleep(){
 		System.out.println("猪睡觉");
+	}
+}
+class T extends Pig03{
+	@Override
+	public void eat() {
+		System.out.println("T吃饭");
 	}
 }

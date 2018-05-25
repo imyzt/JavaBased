@@ -17,61 +17,29 @@ public class BinarySearch {
 		Scanner input = new Scanner(System.in);
 		while (true) {
 			int num = input.nextInt();
-			System.out.println(biary(arr, num));
+			System.out.println("索引" + binarySearch(arr, num));
 			System.out.println("----------------------");
 		}
 		
 	}
-
-	
-	
-	private static int biary(int[] arr, int num) {
-		
-		int max = arr[arr.length - 1], min = arr[0], mid = (max + min) / 2;
-		
-		while (min <= max) {
-			
-			
-			
-		}
-		
-		return mid;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	private static int binarySearch(int[] arr, int value) {
-		int min = arr[0], max = arr[arr.length - 1], mid = (max + min) / 2;
+		//设定最大值(数组的最大索引),最小值(数组的最小索引),和中间值
+		int max = arr.length - 1, min = 0, mid = 0;
 		
-		while (arr[mid] != value) {		//如果传入的值和中间值不相等的情况
+		//只要最小索引不大于最大索引
+		while (min <= max) {
+			//中间值=最大索引和最小索引的中间值
+			mid = (max + min) / 2;
 			
-			if (arr[mid] > value) {		
-				max = mid - 1;			//中间值大于传入的值,说明传入的值在[min,mid-1]之间,故将max下降为mid-1
-				System.out.println(arr[mid] + "大了");
-			}else if (arr[mid] < value) {
-				min = mid + 1;			//中间值小于传入的值,说明传入的值在[mid+1,max]之间,故将min上调为mid+1
-				System.out.println(arr[mid] + "小了");
-			}
-			
-			mid = (max + min) / 2;		//不管是大于还是小于,最后都需要将中间值移动到两个最值中间
-			
-			if (min > max) {
-				return -1;
+			if (arr[mid] == value) {			//如果中间值 等于 value,直接返回
+				return mid;	
+			}else if (arr[mid] > value) {		//如果中间值 大于 value
+				max = mid - 1;					//将最大索引下调到 中间索引 - 1
+			}else {								//如果中间值 小于 value
+				min = mid + 1;					//将最小索引上调到 中间索引 + 1
 			}
 		}
-		
-		return mid;
+		return -1;								//未找到
 	}
 }
